@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+  <title>SpringCrud-Thymeleaf</title>
+</head>
+
+<body>
+<div>
+    <table class="box-table-a">
+        <caption data-th-text="#{products.list.table.title}">Temp table title</caption>
+        <thead>
+            <tr>
+                <th scope="col" data-th-text="#{products.list.codigo.label}">Codigo</th>
+                <th scope="col" data-th-text="#{products.list.nombre.label}">Nombre</th>
+                <th scope="col" data-th-text="#{products.list.precio.label}">Precio</th>
+                <th scope="col" data-th-text="#{products.list.actions.label}">ver</th>
+                <th scope="col" data-th-text="#{products.list.actions.label}">Editar</th>
+                <th scope="col" data-th-text="#{products.list.actions.label}">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="pro : ${products}">
+                <td data-th-text="${pro.codigo}">1</td>
+                <td data-th-text="${pro.nombre}">Iron Butterfly</td>
+                <td data-th-text="${pro.precio}">Triple Butter</td>
+                <td><a href="${pro.showProduct}" >ver</a> 
+                    <a href="${pro.edit}" >editar</a>
+                    <a href="${pro.delete}" >eliminar</a> 
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+     
+</div>
+</body>
+
+</html>

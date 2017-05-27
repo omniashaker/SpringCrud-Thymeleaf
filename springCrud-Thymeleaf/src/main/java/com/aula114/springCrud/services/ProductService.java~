@@ -1,0 +1,7 @@
+package com.aula114.services;
+
+import com.aula114.springcrud.Product;
+
+
+	public interface ProductServicr{
+

@@ -26,7 +26,7 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	public void deleteProduct(int id){
-		return productRepository.delete(id);	
+		 productRepository.delete(id);	
 	}
 
 	
